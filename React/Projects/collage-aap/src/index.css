@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* Hide scrollbar for sidebar */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+/* Custom styles */
+.sidebar-item {
+  @apply w-full flex items-center px-3 py-3 text-sm font-medium rounded-xl transition-all duration-200;
+}
+
+.sidebar-item-active {
+  @apply bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg;
+}
+
+.sidebar-item-inactive {
+  @apply text-gray-300 hover:bg-gray-800 hover:text-white;
+}
