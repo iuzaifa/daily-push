@@ -1,0 +1,126 @@
+
+
+[
+    {
+        "id": 1,
+        "question": "What is the capital of France?",
+        "options": ["Berlin", "Madrid", "Paris", "Rome"],
+        "correct_option": "Paris"
+    },
+    {
+        "id": 2,
+        "question": "Which planet is known as the Red Planet?",
+        "options": ["Earth", "Mars", "Jupiter", "Venus"],
+        "correct_option": "Mars"
+    },
+    {
+        "id": 3,
+        "question": "Who wrote 'Romeo and Juliet'?",
+        "options": ["William Shakespeare", "Charles Dickens", "Jane Austen", "Mark Twain"],
+        "correct_option": "William Shakespeare"
+    },
+    {
+        "id": 4,
+        "question": "What is the largest ocean on Earth?",
+        "options": ["Atlantic", "Pacific", "Indian", "Arctic"],
+        "correct_option": "Pacific"
+    },
+    {
+        "id": 5,
+        "question": "What is the square root of 64?",
+        "options": ["6", "7", "8", "9"],
+        "correct_option": "8"
+    },
+    {
+        "id": 6,
+        "question": "Which gas do plants absorb from the atmosphere?",
+        "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Helium"],
+        "correct_option": "Carbon Dioxide"
+    },
+    {
+        "id": 7,
+        "question": "Who painted the Mona Lisa?",
+        "options": ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Claude Monet"],
+        "correct_option": "Leonardo da Vinci"
+    },
+    {
+        "id": 8,
+        "question": "What is the smallest prime number?",
+        "options": ["0", "1", "2", "3"],
+        "correct_option": "2"
+    },
+    {
+        "id": 9,
+        "question": "Which country is known as the Land of the Rising Sun?",
+        "options": ["China", "Japan", "Thailand", "Korea"],
+        "correct_option": "Japan"
+    },
+    {
+        "id": 10,
+        "question": "What is H2O commonly known as?",
+        "options": ["Hydrogen Peroxide", "Water", "Oxygen", "Salt"],
+        "correct_option": "Water"
+    },
+    {
+        "id": 11,
+        "question": "Which continent is the Sahara Desert located in?",
+        "options": ["Asia", "Africa", "Australia", "Europe"],
+        "correct_option": "Africa"
+    },
+    {
+        "id": 12,
+        "question": "What is the chemical symbol for Gold?",
+        "options": ["Ag", "Au", "Gd", "Go"],
+        "correct_option": "Au"
+    },
+    {
+        "id": 13,
+        "question": "How many days are there in a leap year?",
+        "options": ["364", "365", "366", "367"],
+        "correct_option": "366"
+    },
+    {
+        "id": 14,
+        "question": "Which animal is known as the King of the Jungle?",
+        "options": ["Tiger", "Elephant", "Lion", "Leopard"],
+        "correct_option": "Lion"
+    },
+    {
+        "id": 15,
+        "question": "What is the fastest land animal?",
+        "options": ["Horse", "Cheetah", "Leopard", "Gazelle"],
+        "correct_option": "Cheetah"
+    },
+    {
+        "id": 16,
+        "question": "Which planet has the most moons?",
+        "options": ["Earth", "Saturn", "Mars", "Jupiter"],
+        "correct_option": "Saturn"
+    },
+    {
+        "id": 17,
+        "question": "In which country is the Eiffel Tower located?",
+        "options": ["Italy", "France", "Spain", "Germany"],
+        "correct_option": "France"
+    },
+    {
+        "id": 18,
+        "question": "What is the capital city of Australia?",
+        "options": ["Sydney", "Melbourne", "Canberra", "Perth"],
+        "correct_option": "Canberra"
+    },
+    {
+        "id": 19,
+        "question": "Who invented the telephone?",
+        "options": ["Alexander Graham Bell", "Thomas Edison", "Nikola Tesla", "Albert Einstein"],
+        "correct_option": "Alexander Graham Bell"
+    },
+    {
+        "id": 20,
+        "question": "What is the largest mammal in the world?",
+        "options": ["Elephant", "Blue Whale", "Giraffe", "Shark"],
+        "correct_option": "Blue Whale"
+    }
+
+]
+
