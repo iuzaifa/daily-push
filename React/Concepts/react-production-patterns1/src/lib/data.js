@@ -1,0 +1,241 @@
+
+
+
+
+export const data = [
+    {
+        name: "Jone Ali",
+        email: "example@gmail.com",
+        phone: "8765432198",
+        address: "New Delhi India"
+    },
+    {
+        name: "Sara Khan",
+        email: "sara@example.com",
+        phone: "9876543210",
+        address: "Mumbai India"
+    },
+    {
+        name: "Jone Ali",
+        email: "example@gmail.com",
+        phone: "8765432198",
+        address: "New Delhi India"
+    },
+    {
+        name: "Sara Khan",
+        email: "sara@example.com",
+        phone: "9876543210",
+        address: "Mumbai India"
+    }, {
+        name: "Jone Ali",
+        email: "example@gmail.com",
+        phone: "8765432198",
+        address: "New Delhi India"
+    },
+    {
+        name: "Sara Khan",
+        email: "sara@example.com",
+        phone: "9876543210",
+        address: "Mumbai India"
+    },
+    {
+        name: "Sara Khan",
+        email: "sara@example.com",
+        phone: "9876543210",
+        address: "Mumbai India"
+    }
+];
+
+
+export const tableData = [
+  {
+    id: 1,
+    name: "John Ali",
+    studentId: "STD101",
+    email: "john.ali@example.com",
+    address: "New Delhi, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 2,
+    name: "Ahmad Khan",
+    studentId: "STD102",
+    email: "ahmad.khan@example.com",
+    address: "Mumbai, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 3,
+    name: "Priya Sharma",
+    studentId: "STD103",
+    email: "priya.sharma@example.com",
+    address: "Bangalore, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 4,
+    name: "Rahul Verma",
+    studentId: "STD104",
+    email: "rahul.verma@example.com",
+    address: "Kolkata, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 5,
+    name: "Sneha Patel",
+    studentId: "STD105",
+    email: "sneha.patel@example.com",
+    address: "Ahmedabad, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 6,
+    name: "Vikram Singh",
+    studentId: "STD106",
+    email: "vikram.singh@example.com",
+    address: "Chennai, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 7,
+    name: "Anjali Reddy",
+    studentId: "STD107",
+    email: "anjali.reddy@example.com",
+    address: "Hyderabad, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 8,
+    name: "Arun Kumar",
+    studentId: "STD108",
+    email: "arun.kumar@example.com",
+    address: "Pune, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 9,
+    name: "Meera Joshi",
+    studentId: "STD109",
+    email: "meera.joshi@example.com",
+    address: "Jaipur, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 10,
+    name: "Rohan Desai",
+    studentId: "STD110",
+    email: "rohan.desai@example.com",
+    address: "Lucknow, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 11,
+    name: "Kavita Nair",
+    studentId: "STD111",
+    email: "kavita.nair@example.com",
+    address: "Kochi, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 12,
+    name: "Sanjay Gupta",
+    studentId: "STD112",
+    email: "sanjay.gupta@example.com",
+    address: "Chandigarh, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 13,
+    name: "Neha Choudhary",
+    studentId: "STD113",
+    email: "neha.choudhary@example.com",
+    address: "Bhopal, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 14,
+    name: "Deepak Mishra",
+    studentId: "STD114",
+    email: "deepak.mishra@example.com",
+    address: "Patna, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 15,
+    name: "Pooja Iyer",
+    studentId: "STD115",
+    email: "pooja.iyer@example.com",
+    address: "Coimbatore, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 16,
+    name: "Manish Tiwari",
+    studentId: "STD116",
+    email: "manish.tiwari@example.com",
+    address: "Nagpur, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 17,
+    name: "Swati Rao",
+    studentId: "STD117",
+    email: "swati.rao@example.com",
+    address: "Visakhapatnam, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 18,
+    name: "Rajesh Menon",
+    studentId: "STD118",
+    email: "rajesh.menon@example.com",
+    address: "Thiruvananthapuram, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 19,
+    name: "Anita Das",
+    studentId: "STD119",
+    email: "anita.das@example.com",
+    address: "Guwahati, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+  {
+    id: 20,
+    name: "Mohit Agarwal",
+    studentId: "STD120",
+    email: "mohit.agarwal@example.com",
+    address: "Surat, India",
+    class: "XIth",
+    subjects: ["Math", "English", "Physics", "Chemistry", "Hindi"],
+  },
+];
+export const tableHeader = [
+  { accessor: "id", header: "ID" },
+  { accessor: "name", header: "NAME" },
+  { accessor: "studentId", header: "STUDENT ID" },
+  { accessor: "email", header: "EMAIL" },
+  { accessor: "address", header: "ADDRESS" },
+  { accessor: "class", header: "CLASS" },
+  { accessor: "subjects", header: "SUBJECTS" },
+  { accessor: "action", header: "ACTION" },
+];
