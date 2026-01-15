@@ -1,6 +1,9 @@
 import { Card, TextField, Button, Typography } from "@mui/material";
 import { useState } from "react";
 
+const buttonStyle = {
+  background: `#202020`,
+};
 const input30px = {
   "& .MuiOutlinedInput-root": {
     height: "40px",
@@ -35,10 +38,18 @@ const ContactForm = () => {
   };
 
   return (
-    <Card sx={{ maxWidth: 500 , boxShadow : "0" , border : "1px solid #90909042", background : "#efefef4b", padding : "5px 40px"}}>
-        <Typography variant="h6" sx={{fontSize : `30px`, fontWeight : `900`}}>
-            Contact My Team
-        </Typography>
+    <Card
+      sx={{
+        maxWidth: 500,
+        boxShadow: "0",
+        border: "1px solid #90909042",
+        background: "#efefef4b",
+        padding: "5px 40px",
+      }}
+    >
+      <Typography variant="h6" sx={{ fontSize: `30px`, fontWeight: `900` }}>
+        Contact My Team
+      </Typography>
       <form onSubmit={handleSubmit}>
         <TextField
           name="name"
@@ -83,7 +94,12 @@ const ContactForm = () => {
           onChange={handleChange}
         />
 
-        <Button type="submit" variant="contained" fullWidth sx={{ mt: 2 , mb : 5}}>
+        <Button
+          type="submit"
+          variant="contained"
+          fullWidth
+          sx={{ mt: 2, mb: 5,  background : `#202020`} } 
+        >
           Submit
         </Button>
       </form>

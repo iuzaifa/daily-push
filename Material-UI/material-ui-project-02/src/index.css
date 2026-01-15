@@ -3,5 +3,23 @@
 body {
   font-family: Roboto, Arial, sans-serif;
 } */
-p {
+
+
+.swiper-button-prev, .swiper-button-next {
+  border-radius: 100%;
 }
+
+.swiper-button-prev .swiper-navigation-icon , .swiper-button-next  .swiper-navigation-icon {
+  color: black;
+  height: 20px;
+  
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right:0;
+}
+
