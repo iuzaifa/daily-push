@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Grid, Box, Typography, Button } from "@mui/material";
 import ContactForm from "../ui/ContactForm";
-
+import SectionHeading from "./SectionHeading";
+import SectionDesctiption from "./SectionDesctiption";
 
 const heroHeading = {
   fontSize: "40px",
@@ -21,33 +22,58 @@ const heroSubtitle = {
 
 const buttonStyle = {
   background: `#202020`,
-
 };
 
 const HeroSection = () => {
   return (
     <>
-      <Container maxWidth="xl" sx={{marginTop : `2.5rem`}}>
-        <Grid container spacing={2} padding={5} sx={{display : `flex`, alignItems :" center"}}>
-          <Grid size={{ xs: 12, md: 7 }}>
+      <Container maxWidth="xl" sx={{ marginTop: `2.5rem` }}>
+        <Grid
+          container
+          spacing={10}
+          padding={5}
+          sx={{ display: `flex`, alignItems: " center" }}
+        >
+          <Grid size={{ xs: 12, md: 7 }} padding={7}>
             <Box>
-              <Typography sx={heroHeading} variant="h1">
-                We Are a Software Development Agency
-              </Typography>
-              <Typography variant="subtitle1" component={`p`} sx={heroSubtitle}>
-                We build scalable, secure, and high-performance web and mobile
+              <SectionHeading
+                heading={`We Are a Software Development Agency`}
+              />
+              <SectionDesctiption
+                description={` We build scalable, secure, and high-performance web and mobile
                 applications using modern technologies to help businesses grow
-                faster.
-              </Typography>
+                faster.`}
+              />
 
-              <Box sx={{padding : "30px 0", display : "flex", gap : `32px`}}>
-                <Button variant="contained" sx={buttonStyle}>
-                  More Info
+              <Box sx={{ padding: "30px 0", display: "flex", gap: `32px` }}>
+                
+                <Button
+                  variant="contained"
+                  sx={{
+                    background: "#101010",
+                    borderRadius: "0",
+                    fontSize: "12px",
+                    fontWeight: 400,
+                    marginTop: "30px",
+                  }}
+                >
+                  More Infor
+                </Button>
+                <Button
+                  variant="contained"
+                  sx={{
+                    background: "#2645b5",
+                    borderRadius: "0",
+                    fontSize: "12px",
+                    fontWeight: 400,
+                    marginTop: "30px",
+                    variant : "outlined"
+                  }}
+                >
+                  Get Contact
                 </Button>
 
-                <Button variant="outlined" color="success">
-                  More Info
-                </Button>
+               
               </Box>
             </Box>
           </Grid>

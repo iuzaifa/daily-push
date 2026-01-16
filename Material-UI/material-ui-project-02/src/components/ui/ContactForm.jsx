@@ -1,5 +1,7 @@
 import { Card, TextField, Button, Typography } from "@mui/material";
 import { useState } from "react";
+import SectionHeading from "../sections/SectionHeading";
+import SectionDesctiption from "../sections/SectionDesctiption";
 
 const buttonStyle = {
   background: `#202020`,
@@ -47,9 +49,13 @@ const ContactForm = () => {
         padding: "5px 40px",
       }}
     >
-      <Typography variant="h6" sx={{ fontSize: `30px`, fontWeight: `900` }}>
-        Contact My Team
-      </Typography>
+      <SectionHeading heading={`Contact My Team`} />
+
+      <SectionDesctiption
+        description={
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit."
+        }
+      />
       <form onSubmit={handleSubmit}>
         <TextField
           name="name"
@@ -98,7 +104,7 @@ const ContactForm = () => {
           type="submit"
           variant="contained"
           fullWidth
-          sx={{ mt: 2, mb: 5,  background : `#202020`} } 
+          sx={{ mt: 2, mb: 5, background: `#202020` }}
         >
           Submit
         </Button>
