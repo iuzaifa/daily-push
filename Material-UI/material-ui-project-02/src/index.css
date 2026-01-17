@@ -4,7 +4,14 @@ body {
   font-family: Roboto, Arial, sans-serif;
 } */
 
+.embla {
+  overflow: hidden;
+}
 
+.embla__container {
+  display: flex;
+}
 
-
-
+.embla__slide {
+  flex: 0 0 100%; /* ✅ ONE SLIDE AT A TIME */
+}
