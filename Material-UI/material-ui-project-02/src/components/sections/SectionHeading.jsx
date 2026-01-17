@@ -10,6 +10,8 @@ const SectionHeading = ({heading}) => {
           fontWeight: 300,
           fontFamily: "emoji",
           textTransform: `capitalize`,
+          lineHeight : 1.1,
+          marginBottom : "20px"
         }}
       >
         {heading}

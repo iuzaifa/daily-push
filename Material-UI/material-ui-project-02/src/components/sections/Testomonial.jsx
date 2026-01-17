@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { Grid, Box, Container, Typography, Button } from "@mui/material";
 import useEmblaCarousel from "embla-carousel-react";
 import SectionDesctiption from "./SectionDesctiption";
+import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
+import SkipNextIcon from "@mui/icons-material/SkipNext";
 const data = [
   {
     id: 1,
@@ -50,13 +52,11 @@ const data = [
   },
 ];
 
-
-
 const Testomonial = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
-    slidesToScroll: 1, 
+    slidesToScroll: 1,
     skipSnaps: false,
   });
 
@@ -135,32 +135,32 @@ const Testomonial = () => {
           ))}
         </div>
       </div>
-
       {/* Optional Controls */}
       <Box display="flex" justifyContent="center" gap={2}>
         <Button
-          variant="contained"
+          variant="outlined"
           sx={{
-            background: "#101010",
             borderRadius: 0,
-            fontSize: 12,
-            fontWeight: 400,
+            minWidth: 40,
+            border: "1px solid #101010",
+            color: "#101010",
           }}
           onClick={() => emblaApi?.scrollPrev()}
         >
-          {'<'}
+          <SkipPreviousIcon />
         </Button>
+
         <Button
-          variant="contained"
+          variant="outlined"
           sx={{
-            background: "#101010",
             borderRadius: 0,
-            fontSize: 12,
-            fontWeight: 400,
+            minWidth: 40,
+            border: "1px solid #101010",
+            color: "#101010",
           }}
           onClick={() => emblaApi?.scrollNext()}
         >
-          {'>'}
+          <SkipNextIcon />
         </Button>
       </Box>
     </>
