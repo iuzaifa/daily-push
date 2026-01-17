@@ -4,25 +4,7 @@ import ContactForm from "../ui/ContactForm";
 import SectionHeading from "./SectionHeading";
 import SectionDesctiption from "./SectionDesctiption";
 
-const heroHeading = {
-  fontSize: "40px",
-  fontWeight: 900,
-  textTransform: "uppercase",
-  lineHeight: 1.2,
-  letterSpacing: "1px",
-};
 
-const heroSubtitle = {
-  mt: 2,
-  maxWidth: "520px",
-  color: "#555",
-  lineHeight: 1.2,
-  fontSize: `14px`,
-};
-
-const buttonStyle = {
-  background: `#202020`,
-};
 
 const HeroSection = () => {
   return (

@@ -1,9 +1,11 @@
 import React from "react";
 import HeroSection from "../components/sections/HeroSection";
-import ServiceSection from "../components/sections/ServiceSection";
 import PaltefromSection from "../components/sections/PaltefromSection";
 import FeatureModule from "../components/sections/FeatureModule";
 import { Box, Grid } from "@mui/material";
+import OfficeActions from "../components/sections/OfficeActions";
+import Detection from "../components/sections/Detection";
+import Testomonial from "../components/sections/Testomonial";
 
 const Home = () => {
   return (
@@ -22,6 +24,15 @@ const Home = () => {
         </Box>
         <Box>
           <FeatureModule />
+        </Box>
+        <Box>
+          <OfficeActions />
+        </Box>
+        <Box>
+          <Detection/>
+        </Box>
+        <Box>
+          <Testomonial/>
         </Box>
       </Grid>
     </>
