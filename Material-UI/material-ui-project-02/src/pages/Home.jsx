@@ -10,6 +10,7 @@ import Security from "../components/sections/Security";
 import Team from "../components/sections/Team";
 import MYAccordion from "../components/sections/MYAccordion";
 import Action from "../components/sections/Action";
+import Footer from "../components/sections/Footer";
 
 const Home = () => {
   return (
@@ -44,11 +45,14 @@ const Home = () => {
         <Box>
           <Team />
         </Box>
-        <Box sx={{ marginTop: "50px", }}>
+        <Box sx={{ marginTop: "50px" }}>
           <MYAccordion />
         </Box>
-        <Box sx={{ marginTop: "50px", }}>
-          <Action/>
+        <Box sx={{ marginTop: "50px" }}>
+          <Action />
+        </Box>
+        <Box sx={{background : "#101010", color : "#dcdcdc"}}>
+          <Footer />
         </Box>
       </Grid>
     </>
