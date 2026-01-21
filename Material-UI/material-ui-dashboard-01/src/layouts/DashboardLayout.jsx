@@ -1,19 +1,45 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Sidebar from '../components/common/Sidebar'
 import Header from '../components/common/Header'
-// import { Outlet } from 'react-router-dom'
+import { useMediaQuery } from '@mui/material'
+import { Outlet } from 'react-router-dom'
+
+
+const DRAWER_WIDTH = 240;
+const COLLAPSED_WIDTH = 72;
 
 const DashboardLayout = () => {
+
+  const isMobile = useMediaQuery("(max-width:900px)")
+
+  const [collapsed, setCollapsed] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+
+  useEffect(() => {
+    if (isMobile) {
+      setCollapsed(false); // 👈 reset collapse on mobile
+    }
+  }, [isMobile]);
+
+  const toggleSidebar = () => {
+    if (isMobile){
+      setMobileOpen(!mobileOpen);
+    }else {
+      setCollapsed(!collapsed)
+    }
+  }
+
+  const sidebarwidth = collapsed ? COLLAPSED_WIDTH : DRAWER_WIDTH;
   return (
     <>
       <div style={{ display: "flex", height: "100vh" }}>
         {/* 280px it should be  */}
-        <Sidebar />
+        <Sidebar width={sidebarwidth} collapsed={collapsed} mobileOpen={mobileOpen} onClose={() => setMobileOpen(false)}  isMobile={isMobile}  />
         <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-          <Header />
+          <Header onMenuClick={toggleSidebar}  collapsed={collapsed} />
           <main style={{ padding: "16px", background: "#F7F8FA", flex: 1 }}>
-            {/* <Outlet/> */}
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quisquam magnam esse ipsum nihil architecto amet id unde, animi minus quia, facilis excepturi tenetur nisi voluptatum repellat, pariatur aspernatur corporis.
+            <Outlet/>
           </main>
         </div>
       </div>

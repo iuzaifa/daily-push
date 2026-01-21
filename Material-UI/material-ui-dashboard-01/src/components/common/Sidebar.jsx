@@ -1,120 +1,116 @@
-import { Drawer, List, ListItem, ListItemIcon, Toolbar, ListItemText, ListItemButton } from '@mui/material'
-import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
-import AnalyticsRoundedIcon from "@mui/icons-material/AnalyticsRounded";
-import GroupRoundedIcon from "@mui/icons-material/GroupRounded";
-import AssignmentRoundedIcon from "@mui/icons-material/AssignmentRounded";
-import React from 'react'
-import { href } from 'react-router-dom';
+import React, { useState } from "react";
+import {
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Collapse,
+  Box,
+  Typography,
+} from "@mui/material";
+import { NavLink } from "react-router-dom";
+import AddAPhotoRoundedIcon from "@mui/icons-material/AddAPhotoRounded";
+import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
+import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
+import { sidebarData } from "../../utils/data";
 
-const drawerWidth = 280;
 
-const sidebarData  = [
-  { title : "Home", href : "/", icone : <AnalyticsRoundedIcon/> }
-]
+const Sidebar = ({ width, collapsed, mobileOpen, onClose, isMobile }) => {
+  const [openMenuId, setOpenMenuId] = useState(false);
+
+  const handleToggle = (id) => {
+    setOpenMenuId((prev) => (prev === id ? null : id));
+  };
 
 
-const Sidebar = () => {
+  const content = (
+    <List>
+      {sidebarData.map((data) => {
+        const Icon = data.icon;
+        const hasChildren = Boolean(data.children);
+        const isOpen = openMenuId === data.id;
+
+        return (
+          <React.Fragment key={data.id}>
+            <ListItem disablePadding sx={{ width }}>
+              <ListItemButton
+                component={!hasChildren ? NavLink : "button"}
+                to={!hasChildren ? data.href : undefined}
+                onClick={hasChildren ? () => handleToggle(data.id) : undefined}
+              >
+                <ListItemIcon>
+                  <Icon />
+                </ListItemIcon>
+                {!collapsed && <ListItemText primary={data.title} />}
+                {hasChildren &&
+                  (isOpen ? (
+                    <ExpandMoreRoundedIcon />
+                  ) : (
+                    <ChevronRightRoundedIcon />
+                  ))}
+              </ListItemButton>
+            </ListItem>
+
+            {hasChildren && (
+              <Collapse in={isOpen} timeout="auto" unmountOnExit>
+                <List component="div" disablePadding>
+                  {data.children.map((child) => (
+                    <ListItem key={child.href}>
+                      <ListItemButton component={NavLink} to={child.href}>
+                        <ListItemText primary={child.title} />
+                      </ListItemButton>
+                    </ListItem>
+                  ))}
+                </List>
+              </Collapse>
+            )}
+          </React.Fragment>
+        );
+      })}
+    </List>
+  );
   return (
     <>
-      <Drawer
-        variant="permanent"
-        sx={{
-          background: "#f5f6fa",
-          width: drawerWidth,
-          flexShrink: 0,
-          "& .MuiDrawer-paper": { width: drawerWidth, boxSizing: "border-box" },
-        }}
-      >
-        <Toolbar />
+      {/* Desktop Menu */}
+      {!isMobile && (
+        <Drawer variant="permanent"  sx={{width, }}>
 
-        <List sx={{ px: 2 }}>
-          <ListItem disablePadding>
-            <ListItemButton
-              sx={{
-                px: "5px",
-                py: "2px",
-                borderRadius: "5px",
-                border: "1px solid #7B8396",
-                transition: "all 0.2s ease",
-                "&:hover": {
-                  backgroundColor: "#f7f9ff", // bg
-                  borderColor: "#f9f9f9", // border
-                  // icon
-                  "& .MuiSvgIcon-root": {
-                    color: "#191921",
-                  },
+          <Box borderBottom={"1px solid gray"} sx={{display : "flex",  alignItems : "center", padding : "10px 20px" }}>
+            <Box component={'img'} src="logo.png" alt="adminlogo" height={30} width={20}></Box>
+             
+             {!collapsed && (
+              <Typography variant="h6" sx={{fontFamily : "cursive"}}>
+                Dashboard
+             </Typography>
+             )}
+          </Box>
 
-                  // text
-                  "& .MuiTypography-root": {
-                    color: "#191921",
-                  },
-                },
-              }}
-            >
-              <ListItemIcon sx={{ color: "#7B8396", minWidth: "28px" }}>
-                <HomeRoundedIcon sx={{ fontSize: 18, color: "#7B8396" }} />
-              </ListItemIcon>
-              <ListItemText
-                slotProps={{
-                  primary: {
-                    sx: { fontSize: 13, fontWeight: 500, color: "#7B8396" },
-                  },
-                }}
-                primary={`Home`}
-              />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton sx={{ px: "5px", py: "2px", borderRadius: "5px" }}>
-              <ListItemIcon sx={{ color: "#7B8396", minWidth: "28px" }}>
-                <AnalyticsRoundedIcon sx={{ fontSize: 18, color: "#7B8396" }} />
-              </ListItemIcon>
-              <ListItemText
-                slotProps={{
-                  primary: {
-                    sx: { fontSize: 13, fontWeight: 500, color: "#7B8396" },
-                  },
-                }}
-                primary={`Analytics`}
-              />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton sx={{ px: "5px", py: "2px", borderRadius: "5px" }}>
-              <ListItemIcon sx={{ color: "#7B8396", minWidth: "28px" }}>
-                <GroupRoundedIcon sx={{ fontSize: 18, color: "#7B8396" }} />
-              </ListItemIcon>
-              <ListItemText
-                slotProps={{
-                  primary: {
-                    sx: { fontSize: 13, fontWeight: 500, color: "#7B8396" },
-                  },
-                }}
-                primary={`Client's`}
-              />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton sx={{ px: "5px", py: "2px", borderRadius: "5px" }}>
-              <ListItemIcon sx={{ color: "#7B8396", minWidth: "28px" }}>
-                <AssignmentRoundedIcon
-                  sx={{ fontSize: 18, color: "#7B8396" }}
-                />
-              </ListItemIcon>
-              <ListItemText
-                slotProps={{
-                  primary: {
-                    sx: { fontSize: 13, fontWeight: 500, color: "#7B8396" },
-                  },
-                }}
-                primary={`Task`}
-              />
-            </ListItemButton>
-          </ListItem>
-        </List>
-      </Drawer>
+          {content}
+
+        </Drawer>
+      )}
+
+
+
+
+      {/* Mobile Menu */}
+      {isMobile && (
+        <Drawer
+          variant="temporary"
+          open={mobileOpen}
+          onClose={onClose}
+          ModalProps={{ keepMounted: true }}
+          sx={{
+            "& .MuiDrawer-paper": { width: 240 },
+          }}
+        >
+          {content}
+        </Drawer>
+      )}
     </>
   );
-}
+};
 
-export default Sidebar
+export default Sidebar;
