@@ -1,18 +1,42 @@
-import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
+import DashboardRoundedIcon from "@mui/icons-material/DashboardRounded";
 import AnalyticsRoundedIcon from "@mui/icons-material/AnalyticsRounded";
 import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
 import WebRoundedIcon from "@mui/icons-material/WebRounded";
+import CastRoundedIcon from "@mui/icons-material/CastRounded";
 
 
 
 
 export const sidebarData = [
   {
-    id: "home",
-    title: "Home",
-    icon: HomeRoundedIcon,
+    id: "dashboard",
+    title: "Dashboard",
+    icon: DashboardRoundedIcon,
     href: "/",
   },
+  {
+    id: "reports",
+    title: "Reports",
+    icon: CastRoundedIcon,
+    children: [
+      { title: "Sales Reports", href: "/reports/sales-reports" },
+      { title: "Leads Reports", href: "/reports/leads-reports" },
+      { title: "Project Reports", href: "/reports/project-reports" },
+      { title: "Timesheet Reports", href: "/reports/timesheet-reports" },
+    ],
+  },
+  {
+    id: "proposal",
+    title: "Proposal",
+    icon: CastRoundedIcon,
+    children: [
+      { title: "Proposal", href: "/proposal/proposals" },
+      { title: "Proposal View", href: "/proposal/proposal-view" },
+      { title: "Proposal Edit", href: "/proposal/proposal-edit" },
+      { title: "Proposal Create", href: "/proposal/proposal-create" },
+    ],
+  },
+
   {
     id: "analytics",
     title: "Analytics",

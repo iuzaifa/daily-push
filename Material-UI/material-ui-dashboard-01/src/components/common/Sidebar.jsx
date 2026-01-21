@@ -10,8 +10,7 @@ import {
   Box,
   Typography,
 } from "@mui/material";
-import { NavLink } from "react-router-dom";
-import AddAPhotoRoundedIcon from "@mui/icons-material/AddAPhotoRounded";
+import { useLocation, NavLink } from "react-router-dom";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 import { sidebarData } from "../../utils/data";
@@ -19,6 +18,7 @@ import { sidebarData } from "../../utils/data";
 
 const Sidebar = ({ width, collapsed, mobileOpen, onClose, isMobile }) => {
   const [openMenuId, setOpenMenuId] = useState(false);
+  const [isActive , setIsActive] = useState(false);
 
   const handleToggle = (id) => {
     setOpenMenuId((prev) => (prev === id ? null : id));
@@ -58,7 +58,17 @@ const Sidebar = ({ width, collapsed, mobileOpen, onClose, isMobile }) => {
                 <List component="div" disablePadding>
                   {data.children.map((child) => (
                     <ListItem key={child.href}>
-                      <ListItemButton component={NavLink} to={child.href}>
+                      <ListItemButton
+                        component={NavLink}
+                        to={child.href}
+                        sx={{
+                          "&.active": {
+                            bgcolor: "#EEF2FF",
+                            color: "#3F51B5",
+                            borderLeft: "3px solid #3F51B5",
+                          },
+                        }}
+                      >
                         <ListItemText primary={child.title} />
                       </ListItemButton>
                     </ListItem>
