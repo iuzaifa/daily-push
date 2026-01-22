@@ -1,12 +1,13 @@
 import { AppBar, Box, IconButton, Toolbar, Typography } from '@mui/material'
 import FormatAlignLeftRoundedIcon from "@mui/icons-material/FormatAlignLeftRounded";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
+import ThemeToggle from '../../theme/ThemeToggle';
 
 const Header = ({ onMenuClick, collapsed }) => {
   return (
     <>
-      <AppBar position="static" color="inherit" elevation={1}>
-        <Toolbar>
+      <AppBar position="static" color="inherit" elevation={1} >
+        <Toolbar sx={{justifyContent : "space-between"}}>
           <IconButton edge="start" onClick={onMenuClick}>
             {!collapsed ? <FormatAlignLeftRoundedIcon /> : <ArrowForwardRoundedIcon />}
           </IconButton>
@@ -14,6 +15,9 @@ const Header = ({ onMenuClick, collapsed }) => {
           <Typography variant="h6" sx={{ ml: 2 }}>
             CRM Dashboard
           </Typography>
+
+
+          <ThemeToggle/>
 
 
         </Toolbar>

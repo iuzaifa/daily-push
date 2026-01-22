@@ -38,7 +38,7 @@ const DashboardLayout = () => {
         <Sidebar width={sidebarwidth} collapsed={collapsed} mobileOpen={mobileOpen} onClose={() => setMobileOpen(false)}  isMobile={isMobile}  />
         <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
           <Header onMenuClick={toggleSidebar}  collapsed={collapsed} />
-          <main style={{ background: "#ececec6b", flex: 1 }}>
+          <main style={{ background: "#ececec6b", flex: 1 , }}>
             <Outlet/>
           </main>
         </div>
