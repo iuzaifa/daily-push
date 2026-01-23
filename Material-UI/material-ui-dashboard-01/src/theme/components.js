@@ -1,22 +1,14 @@
 const components = {
-  MuiButton: {
+  MuiCssBaseline: {
     styleOverrides: {
-      root: {
-        textTransform: "none",
-        borderRadius: 8,
-        fontWeight: 500,
+      body: {
+        transition:
+          "background-color 0.3s ease, color 0.3s ease",
       },
-    },
-  },
 
-  MuiListItemButton: {
-    styleOverrides: {
-      root: {
-        borderRadius: 8,
-        "&.Mui-selected": {
-          backgroundColor: "#EEF2FF",
-          color: "#3F51B5",
-        },
+      "*": {
+        transition:
+          "background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease",
       },
     },
   },

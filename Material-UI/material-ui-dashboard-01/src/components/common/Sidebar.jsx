@@ -85,25 +85,47 @@ const Sidebar = ({ width, collapsed, mobileOpen, onClose, isMobile }) => {
     <>
       {/* Desktop Menu */}
       {!isMobile && (
-        <Drawer variant="permanent"  sx={{width, }}>
+        <Drawer
+          variant="permanent"
+          sx={{
+            "& .MuiDrawer-paper": {
+              width,
+              transition: (theme) =>
+                theme.transitions.create("width", {
+                  easing: theme.transitions.easing.sharp,
+                  duration: theme.transitions.duration.enteringScreen,
+                }),
+              overflowX: "hidden",
+              borderRight: 1,
+              borderColor: "divider",
+              boxSizing: "border-box",
+              position: "relative",
+              height: "100vh",
+            },
+          }}
+        >
+          <Box
+            borderBottom={"1px solid gray"}
+            sx={{ display: "flex", alignItems: "center", padding: "10px 20px" }}
+          >
+            <Box
+              component={"img"}
+              src="logo.png"
+              alt="adminlogo"
+              height={30}
+              width={20}
+            ></Box>
 
-          <Box borderBottom={"1px solid gray"} sx={{display : "flex",  alignItems : "center", padding : "10px 20px" }}>
-            <Box component={'img'} src="logo.png" alt="adminlogo" height={30} width={20}></Box>
-             
-             {!collapsed && (
-              <Typography variant="h6" sx={{fontFamily : "cursive"}}>
+            {!collapsed && (
+              <Typography variant="h6" sx={{ fontFamily: "cursive" }}>
                 Dashboard
-             </Typography>
-             )}
+              </Typography>
+            )}
           </Box>
 
           {content}
-
         </Drawer>
       )}
-
-
-
 
       {/* Mobile Menu */}
       {isMobile && (

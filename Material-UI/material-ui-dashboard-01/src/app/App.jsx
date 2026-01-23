@@ -8,18 +8,24 @@ import { ColorModeContext } from "../theme/ColorModeContext";
 
 
 function App() {
-  const [mode, setMode] = useState("light");
+
+  const getInitialMode = () => localStorage.getItem("themeMode" || "light");
+  const [mode, setMode] = useState(getInitialMode);
 
   const colorMode = useMemo(
     () => ({
       mode,
-      toggleColorMode: () =>
-        setMode((prev) => (prev === "light" ? "dark" : "light")),
+      toggleColorMode: () => setMode((prev) =>  {
+        const next = prev === "light" ? "dark" : "light";
+        localStorage.setItem("themeMode", next);
+        return next;
+      }),
     }),
     [mode],
   );
 
   const theme = useMemo(() => getTheme(mode), [mode]);
+
 
 
   return (

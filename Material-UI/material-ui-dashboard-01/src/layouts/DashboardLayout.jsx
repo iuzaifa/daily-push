@@ -31,15 +31,17 @@ const DashboardLayout = () => {
   }
 
   const sidebarwidth = collapsed ? COLLAPSED_WIDTH : DRAWER_WIDTH;
+
+
   return (
     <>
       <div style={{ display: "flex", height: "100vh" }}>
         {/* 280px it should be  */}
-        <Sidebar width={sidebarwidth} collapsed={collapsed} mobileOpen={mobileOpen} onClose={() => setMobileOpen(false)}  isMobile={isMobile}  />
+        <Sidebar width={sidebarwidth} collapsed={collapsed} mobileOpen={mobileOpen} onClose={() => setMobileOpen(false)} isMobile={isMobile}/>
         <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-          <Header onMenuClick={toggleSidebar}  collapsed={collapsed} />
-          <main style={{ background: "#ececec6b", flex: 1 , }}>
-            <Outlet/>
+          <Header onMenuClick={toggleSidebar} collapsed={collapsed} />
+          <main style={{ flex: 1 }}>
+            <Outlet />
           </main>
         </div>
       </div>
