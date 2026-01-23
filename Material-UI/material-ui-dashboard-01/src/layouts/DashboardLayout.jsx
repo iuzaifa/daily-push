@@ -38,9 +38,9 @@ const DashboardLayout = () => {
       <div style={{ display: "flex", height: "100vh" }}>
         {/* 280px it should be  */}
         <Sidebar width={sidebarwidth} collapsed={collapsed} mobileOpen={mobileOpen} onClose={() => setMobileOpen(false)} isMobile={isMobile}/>
-        <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+        <div style={{ flex: 1, display: "flex", flexDirection: "column", position : "relative" }}>
           <Header onMenuClick={toggleSidebar} collapsed={collapsed} />
-          <main style={{ flex: 1 }}>
+          <main style={{ flex: 1, marginLeft : sidebarwidth }}>
             <Outlet />
           </main>
         </div>

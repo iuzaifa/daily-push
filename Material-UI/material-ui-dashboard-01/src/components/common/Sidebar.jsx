@@ -26,7 +26,7 @@ const Sidebar = ({ width, collapsed, mobileOpen, onClose, isMobile }) => {
 
 
   const content = (
-    <List>
+    <List >
       {sidebarData.map((data) => {
         const Icon = data.icon;
         const hasChildren = Boolean(data.children);
@@ -99,14 +99,21 @@ const Sidebar = ({ width, collapsed, mobileOpen, onClose, isMobile }) => {
               borderRight: 1,
               borderColor: "divider",
               boxSizing: "border-box",
-              position: "relative",
+              position: "fixed",
               height: "100vh",
             },
           }}
         >
           <Box
             borderBottom={"1px solid gray"}
-            sx={{ display: "flex", alignItems: "center", padding: "10px 20px" }}
+            sx={{
+              display: "center",
+              alignItems: "center",
+              padding: "10px 20px",
+              zIndex : "1000",
+              bgcolor : "background.default",
+              width : "full"
+            }}
           >
             <Box
               component={"img"}
@@ -114,6 +121,7 @@ const Sidebar = ({ width, collapsed, mobileOpen, onClose, isMobile }) => {
               alt="adminlogo"
               height={30}
               width={20}
+              
             ></Box>
 
             {!collapsed && (
@@ -123,7 +131,7 @@ const Sidebar = ({ width, collapsed, mobileOpen, onClose, isMobile }) => {
             )}
           </Box>
 
-          {content}
+          <Box sx={{marginTop : "40px", position  : "fixed", overflow : "scroll",}}>{content}</Box>
         </Drawer>
       )}
 
