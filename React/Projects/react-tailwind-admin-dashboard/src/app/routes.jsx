@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import DashboardLayout from "../layout/DashboardLayout"
+import Layout from "../layout/Layout";
 import Dashboard from "../pages/crm/dashboard/Dashboard"
 
 export const routes = createBrowserRouter([
   {
-    path: "/", element: <DashboardLayout/>,
+    path: "/", element: <Layout/>,
     children : [
         {index : true , element : <Dashboard/>}
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
-import { LayoutDashboard, ChevronRight, CastIcon, AppWindowIcon, ChevronDown } from "lucide-react";
+import { data, Link } from 'react-router-dom';
+import { LayoutDashboard, ChevronRight, ChevronDown } from "lucide-react";
+import { sidebarData } from '../../utils/data';
 
 
 
@@ -25,34 +26,36 @@ const Sidebar = ( {collapsed, onClick}) => {
         <nav className='p-4 siderbar-nav'>
           <p className='text-[10px] font-semibold mb-2 text-slate-400'>{collapsed ? "..." : "Navigation"}</p>
           <ul>
-            <li>
                
 
-               {collapsed ? (
-                 <>
-                 <Link  onClick={onClick} to={"/"} className='text-sm text-gray-800 font-medium flex items-center justify-between p-2 hover:bg-slate-200/50 hover:text-slate-800 rounded-md'><div className='flex  items-center gap-2.5'> {collapsed ? (<LayoutDashboard size={15}/>) : (<><LayoutDashboard size={15}/> Dashboard</>)}   </div> {openSubmenu ? (<ChevronRight size={15}/>) : (<ChevronDown size={15}/>) }</Link>
-                  {openSubmenu && (
-                    <ul className='ml-5 mt-1 hidden'>
-                      <li className='px-3 py-1.5 text-xs text-slate-800/90  font-semibold hover:bg-slate-200/50 rounded-sm'><Link to={"/"}>CRM</Link></li>
-                      <li className='px-3 py-1.5 text-xs text-slate-800/90  font-semibold hover:bg-slate-200/50 rounded-sm'><Link to={"/"}>Analytics</Link></li>
-                      <li className='px-3 py-1.5 text-xs text-slate-800/90  font-semibold hover:bg-slate-200/50 rounded-sm'><Link to={"/"}>Reports</Link></li>
-                      <li className='px-3 py-1.5 text-xs text-slate-800/90  font-semibold hover:bg-slate-200/50 rounded-sm'><Link to={"/"}>Leads</Link></li>
-                    </ul>
-                  )}
-                 </>
-               ) : (<>
-                <Link  onClick={() => setOpenSubmenu(prev => !prev)} to={"/"} className='text-sm text-gray-800 font-medium flex items-center justify-between p-2 hover:bg-slate-200/50 hover:text-slate-800 rounded-md'><div className='flex  items-center gap-2.5'> {collapsed ? (<LayoutDashboard size={15}/>) : (<><LayoutDashboard size={15}/> Dashboard</>)}   </div> {openSubmenu ? (<ChevronRight size={15}/>) : (<ChevronDown size={15}/>) }</Link>
-                  {openSubmenu && (
-                    <ul className='ml-5 mt-1'>
-                      <li className='px-3 py-1.5 text-xs text-slate-800/90  font-semibold hover:bg-slate-200/50 rounded-sm'><Link to={"/"}>CRM</Link></li>
-                      <li className='px-3 py-1.5 text-xs text-slate-800/90  font-semibold hover:bg-slate-200/50 rounded-sm'><Link to={"/"}>Analytics</Link></li>
-                      <li className='px-3 py-1.5 text-xs text-slate-800/90  font-semibold hover:bg-slate-200/50 rounded-sm'><Link to={"/"}>Reports</Link></li>
-                      <li className='px-3 py-1.5 text-xs text-slate-800/90  font-semibold hover:bg-slate-200/50 rounded-sm'><Link to={"/"}>Leads</Link></li>
-                    </ul>
-                  )}
-               
-               </>)}
-            </li>
+               {collapsed ?
+               (
+                <div>
+                 {sidebarData.map((data) => {
+                   <li key={data.id}>
+                    <Link  onClick={onClick} to={"/"} className='text-sm text-gray-800 font-medium flex items-center justify-between p-2 hover:bg-slate-200/50 hover:text-slate-800 rounded-md'><div className='flex  items-center gap-2.5'> {collapsed ? (<LayoutDashboard size={15}/>) : (<><LayoutDashboard size={15}/> {data.title}</>)}   </div> {openSubmenu ? (<ChevronRight size={15}/>) : (<ChevronDown size={15}/>) }</Link>
+                      {openSubmenu && (
+                        <ul className='ml-5 mt-1 hidden'>
+                          <li className='px-3 py-1.5 text-xs text-slate-800/90  font-semibold hover:bg-slate-200/50 rounded-sm'><Link to={"/"}>Leads</Link></li>
+                        </ul>
+                      )}
+                    </li>
+                 })}
+                </div>
+               ) : (
+              <div>
+                 {sidebarData.map((data) => (
+                  <li>
+                    <Link  onClick={() => setOpenSubmenu(prev => !prev)} to={"/"} className='text-sm text-gray-800 font-medium flex items-center justify-between p-2 hover:bg-slate-200/50 hover:text-slate-800 rounded-md'><div className='flex  items-center gap-2.5'> {collapsed ? (<data size={15}/>) : (<><data.icon size={15}/> {data.title}</>)}   </div> {openSubmenu ? (<ChevronRight size={15}/>) : (<ChevronDown size={15}/>) }</Link>
+                      {openSubmenu && (
+                        <ul className='ml-5 mt-1'>
+                          <li className='px-3 py-1.5 text-xs text-slate-800/90  font-semibold hover:bg-slate-200/50 rounded-sm'><Link to={"/"}>CRM</Link></li>
+                        </ul>
+                      )}
+                  </li>
+                 ))}
+              </div>
+              )}
           </ul>
         </nav>
       </aside>
