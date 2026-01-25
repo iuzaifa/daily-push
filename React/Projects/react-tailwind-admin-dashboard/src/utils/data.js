@@ -7,6 +7,9 @@ import {
   NotebookTabs,
 } from "lucide-react";
 
+
+
+
 export const sidebarData = [
   {
     id: "dashboard",
@@ -19,10 +22,26 @@ export const sidebarData = [
     title: "Reports",
     icon: NotebookTabs,
     children: [
-      { title: "Sales Reports", href: "/reports/sales-reports" },
-      { title: "Leads Reports", href: "/reports/leads-reports" },
-      { title: "Project Reports", href: "/reports/project-reports" },
-      { title: "Timesheet Reports", href: "/reports/timesheet-reports" },
+      { 
+        id: "sales-reports",
+        title: "Sales Reports", 
+        href: "/reports/sales-reports" 
+      },
+      { 
+        id: "leads-reports",
+        title: "Leads Reports", 
+        href: "/reports/leads-reports" 
+      },
+      { 
+        id: "project-reports",
+        title: "Project Reports", 
+        href: "/reports/project-reports" 
+      },
+      { 
+        id: "timesheet-reports",
+        title: "Timesheet Reports", 
+        href: "/reports/timesheet-reports" 
+      },
     ],
   },
   {
@@ -30,20 +49,43 @@ export const sidebarData = [
     title: "Proposal",
     icon: CastIcon,
     children: [
-      { title: "Proposal", href: "/proposal/proposals" },
-      { title: "Proposal View", href: "/proposal/proposal-view" },
-      { title: "Proposal Edit", href: "/proposal/proposal-edit" },
-      { title: "Proposal Create", href: "/proposal/proposal-create" },
+      { 
+        id: "proposals",
+        title: "Proposal", 
+        href: "/proposal/proposals" 
+      },
+      { 
+        id: "proposal-view",
+        title: "Proposal View", 
+        href: "/proposal/proposal-view" 
+      },
+      { 
+        id: "proposal-edit",
+        title: "Proposal Edit", 
+        href: "/proposal/proposal-edit" 
+      },
+      { 
+        id: "proposal-create",
+        title: "Proposal Create", 
+        href: "/proposal/proposal-create" 
+      },
     ],
   },
-
   {
     id: "analytics",
     title: "Analytics",
     icon: ChartBar,
     children: [
-      { title: "Overview", href: "/analytics/overview" },
-      { title: "Reports", href: "/analytics/reports" },
+      { 
+        id: "analytics-overview",
+        title: "Overview", 
+        href: "/analytics/overview" 
+      },
+      { 
+        id: "analytics-reports",
+        title: "Reports", 
+        href: "/analytics/reports" 
+      },
     ],
   },
   {
@@ -51,8 +93,16 @@ export const sidebarData = [
     title: "Settings",
     icon: Settings,
     children: [
-      { title: "Profile", href: "/settings/profile" },
-      { title: "Security", href: "/settings/security" },
+      { 
+        id: "profile",
+        title: "Profile", 
+        href: "/settings/profile" 
+      },
+      { 
+        id: "security",
+        title: "Security", 
+        href: "/settings/security" 
+      },
     ],
   },
   {
@@ -61,35 +111,42 @@ export const sidebarData = [
     icon: PanelsTopLeft,
     children: [
       // Core Pages
-      { title: "Home", href: "/website/home" },
-      { title: "About Us", href: "/website/about" },
-      { title: "Services", href: "/website/services" },
-      { title: "Products", href: "/website/products" },
+      { id: "home", title: "Home", href: "/website/home" },
+      { id: "about", title: "About Us", href: "/website/about" },
+      { id: "services", title: "Services", href: "/website/services" },
+      { id: "products", title: "Products", href: "/website/products" },
+      
       // Content & Trust
-      { title: "Testimonials", href: "/website/testimonials" },
-      { title: "Case Studies", href: "/website/case-studies" },
-      { title: "Our Clients", href: "/website/clients" },
-      { title: "Partners", href: "/website/partners" },
+      { id: "testimonials", title: "Testimonials", href: "/website/testimonials" },
+      { id: "case-studies", title: "Case Studies", href: "/website/case-studies" },
+      { id: "clients", title: "Our Clients", href: "/website/clients" },
+      { id: "partners", title: "Partners", href: "/website/partners" },
+      
       // Team & Company
-      { title: "Team", href: "/website/team" },
-      { title: "Careers", href: "/website/careers" },
-      { title: "Our Culture", href: "/website/culture" },
+      { id: "team", title: "Team", href: "/website/team" },
+      { id: "careers", title: "Careers", href: "/website/careers" },
+      { id: "culture", title: "Our Culture", href: "/website/culture" },
+      
       // Blog & Media
-      { title: "Blog", href: "/website/blog" },
-      { title: "Blog Categories", href: "/website/blog/categories" },
-      { title: "Press & Media", href: "/website/press" },
+      { id: "blog", title: "Blog", href: "/website/blog" },
+      { id: "blog-categories", title: "Blog Categories", href: "/website/blog/categories" },
+      { id: "press", title: "Press & Media", href: "/website/press" },
+      
       // Support & Info
-      { title: "FAQ", href: "/website/faq" },
-      { title: "Contact", href: "/website/contact" },
-      { title: "Support", href: "/website/support" },
+      { id: "faq", title: "FAQ", href: "/website/faq" },
+      { id: "contact", title: "Contact", href: "/website/contact" },
+      { id: "support", title: "Support", href: "/website/support" },
+      
       // Legal
-      { title: "Privacy Policy", href: "/website/privacy-policy" },
-      { title: "Terms & Conditions", href: "/website/terms" },
-      { title: "Refund Policy", href: "/website/refund-policy" },
+      { id: "privacy-policy", title: "Privacy Policy", href: "/website/privacy-policy" },
+      { id: "terms", title: "Terms & Conditions", href: "/website/terms" },
+      { id: "refund-policy", title: "Refund Policy", href: "/website/refund-policy" },
+      
       // Extra / Advanced
-      { title: "Pricing", href: "/website/pricing" },
-      { title: "Features", href: "/website/features" },
-      { title: "Integrations", href: "/website/integrations" },
+      { id: "pricing", title: "Pricing", href: "/website/pricing" },
+      { id: "features", title: "Features", href: "/website/features" },
+      { id: "integrations", title: "Integrations", href: "/website/integrations" },
     ],
   },
 ];
+

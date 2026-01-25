@@ -1,8 +1,13 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { sidebarData } from "../../utils/data";
-import { Database } from "lucide-react";
+import { useState } from "react";
+import { ChevronRight, LayoutDashboard } from "lucide-react";
 
 const AppSidebar = ({collapsed}) => {
+
+  const [open, setOpen] = useState(false);
+
+  
   return (
     <aside className={`bg-white border-r border-slate-200 h-screen trss transition-all duration-300 ${collapsed ? "w-16" : "w-64"}`}>
         {/* AAP LOGO */}
@@ -17,12 +22,30 @@ const AppSidebar = ({collapsed}) => {
 
         {/* NAVBAR  */}
       <nav className="flex-1 px-4 space-y-2 overflow-auto">
-        <ul>
-            <li className="flex bg-slate-100 px-2 py-1 rounded-sm">
-                <span><Database/></span>
-                <NavLink to={`/`}>{!collapsed && "lorem"}</NavLink>
-            </li>
+
+        <ul className="">
+          <li>
+              <NavLink onClick={() => setOpen(!open)} to={`/`} className={`w-full flex items-center justify-between p-2 text-sm rounded-sm`}>
+                <div className="flex items-center justify-between gap-3">
+                  <LayoutDashboard size={15} /> 
+                  {!collapsed && <span>Dashboard</span>}  
+                </div>
+
+                {!collapsed && <ChevronRight size={15}/>}
+              </NavLink>
+
+          </li>
         </ul>
+
+                {open &&  (
+                  <>
+                    Childs
+                  </>
+                )}
+
+
+       
+       
       </nav>
     </aside>
   );
