@@ -31,10 +31,9 @@ const AppSidebar = ({collapsed}) => {
             const isOpen = openMenu === data.id;
 
             return (
-              <>
                 <li key={data.id}>
                     {hasChildren ? (
-                      <button onClick={() => toggleSubmenu(data.id)} className={`w-full flex items-center justify-between p-2 text-sm rounded-sm`}>
+                      <button onClick={() => toggleSubmenu(data.id)} className={`hover:bg-slate-100 w-full flex items-center justify-between p-2 text-sm rounded-sm`}>
                         <div className="flex items-center justify-between gap-3">
                           <Icon size={15} />
                           {!collapsed && <span>{data.title}</span>}
@@ -44,7 +43,7 @@ const AppSidebar = ({collapsed}) => {
                       </button>
 
                     ):(
-                        <NavLink to={data.href} className={({isActive}) => `${isActive ? "bg-red-200" : ""} w-full flex items-center justify-between p-2 text-sm rounded-sm`}>
+                        <NavLink to={data.href} className={({isActive}) => `${isActive ? "bg-slate-100" : "hover:bg-slate-100"} w-full flex items-center justify-between p-2 text-sm rounded-sm`}>
                           <div className="flex items-center justify-between gap-3">
                             <Icon size={15} />
                             {!collapsed && <span>{data.title}</span>}
@@ -82,7 +81,6 @@ const AppSidebar = ({collapsed}) => {
                     
                 </li>
 
-              </>
             )
           })}
 

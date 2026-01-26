@@ -1,12 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../layout/Layout";
 import Dashboard from "../pages/crm/dashboard/Dashboard"
+import SalesReport from "../pages/crm/reports/SalesReport";
 
 export const routes = createBrowserRouter([
   {
     path: "/", element: <Layout/>,
     children : [
-        {index : true , element : <Dashboard/>}
+        {index : true , element : <Dashboard/>},
+        {path : "/reports/sales-reports" , element : <SalesReport/>}
 
     ]
   },

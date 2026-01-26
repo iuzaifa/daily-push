@@ -5,7 +5,11 @@ import {
   Settings,
   PanelsTopLeft,
   NotebookTabs,
-  Circle ,
+  Circle,
+  UsersRound,
+  Building2,
+  ChartNoAxesCombined,
+  BadgeIndianRupee,
 } from "lucide-react";
 
 export const menu = [
@@ -193,3 +197,36 @@ export const menu = [
 
 
 
+
+
+export const DASHBOARD_STATS = [
+  {
+    title: "Total Contacts",
+    value: 1234,
+    change: "+12% from last month",
+    icon: UsersRound,
+    isChange: true,
+  },
+  {
+    title: "Companies",
+    value: 456,
+    change: "+8% from last month",
+    icon: Building2,
+    isChange: true,
+  },
+  {
+    title: "Active Deals",
+    value: 89,
+    change: "-23% from last month",
+    icon: ChartNoAxesCombined,
+    isChange: false,
+  },
+  {
+    title: "Revenue",
+    value: 234567,
+    prefix: "$",
+    change: "+18% from last month",
+    icon: BadgeIndianRupee,
+    isChange: true,
+  },
+];

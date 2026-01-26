@@ -15,7 +15,7 @@ const Layout = () => {
         <AppSidebar collapsed={collapsed} />
         <div className="flex-1">
           <AppHeader collapsed={collapsed} onClick={() => setCollapsed(prev => !prev)} />
-          <main className="mt-16 p-2">
+          <main className="mt-16 p-1.5">
             <Outlet />
           </main>
         </div>
