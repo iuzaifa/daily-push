@@ -1,11 +1,11 @@
-import Counter from "./components/Counter";
-import ToggleOrHideAndShow from "./components/ToggleOrHideAndShow";
+import ReactProps from "./components/ReactProps";
+
 
 function App() {
 
   return (
     <>
-      <ToggleOrHideAndShow/>
+      <ReactProps/>
     </>
   );
 }
