@@ -1,11 +1,14 @@
-import ReactProps from "./components/ReactProps";
+import Demo from "./components/ract-props/Demo";
 
 
 function App() {
 
+
+ 
+
   return (
     <>
-      <ReactProps/>
+      <Demo/>
     </>
   );
 }
