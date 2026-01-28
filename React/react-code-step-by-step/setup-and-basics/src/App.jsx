@@ -1,14 +1,11 @@
-import Demo from "./components/ract-props/Demo";
+import InputClear from "./components/InputClear";
 
 
 function App() {
-
-
- 
-
   return (
     <>
-      <Demo/>
+      <InputClear/>
+      {/* next controll xomponents  */}
     </>
   );
 }
