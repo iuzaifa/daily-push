@@ -9,6 +9,7 @@ public class FitnessMonolithApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FitnessMonolithApplication.class, args);
         System.out.println("Fitness Monolith Application Started..." );
+
 	}
 
 }
