@@ -3,8 +3,9 @@ package basics;
 public class FibonacciSeries {
 
     public static void main(String[] args) {
-        int n = 9;
+        int n = 5;
         fibonacci(n);
+        fibonacciTest(n);
     }
 
     public static void fibonacci(int n) {
@@ -28,5 +29,25 @@ public class FibonacciSeries {
         }
 
         System.out.println(); // new line at end
+    }
+
+
+    public static int fibonacciTest(int n) {
+        if ( n == 0 )return  0;
+        if (n == 1 || n == 2) {
+            return 1;
+        }
+
+        int basecase0 = 0;
+        int basecase1 = 1;
+        int temp = 0;
+        for (int i = 3; i <= n; i++){
+            temp = basecase0 + basecase1;
+            basecase0 = basecase1;
+            basecase1 = temp;
+            System.out.print(temp +", ");
+        }
+
+        return temp;
     }
 }
